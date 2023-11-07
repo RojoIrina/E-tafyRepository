@@ -1,0 +1,180 @@
+﻿<Window x:Class="ModeEthiqueEtafy.View.ConditionUtilisateur"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModeEthiqueEtafy.View"
+        mc:Ignorable="d"
+       Height="417" Width="700" Name="conditionUtilisateur" ResizeMode="NoResize">
+    <Grid Background="#FFFBD0D0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="336*"/>
+            <ColumnDefinition Width="363*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="104.736"></RowDefinition>
+            <RowDefinition Height="23.975"/>
+            <RowDefinition Height="271.289"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" x:Name="ConditionsUtilisationVendeur"
+                   Content="Conditions d'utilisation" 
+                   HorizontalAlignment="Left"
+                   Margin="236,5,0,10"
+                   Foreground="#753422"
+                   FontSize="20"
+               FontWeight="Bold" Grid.ColumnSpan="3" Width="228">
+            
+        </Label>
+        <Border Background="#FFFBD0D0" CornerRadius="0,0,12,12" Margin="0,10,0,145" Grid.RowSpan="3" Grid.Row="1" Grid.ColumnSpan="3">
+
+            <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95" RenderTransformOrigin="0.488,0.477" Width="616" Background="White" Margin="42,0,42,-23">
+                <Grid Margin="0,55,0,38" >
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,0,0,20">
+                        <RichTextBox Height="208" 
+                             Background="White" 
+                             Width="602"
+                             IsReadOnly="True"
+                             Margin="0,0,0,0">
+                            <RichTextBox.Padding>
+                                <Thickness Left="10" Top="10" Right="20" Bottom="0"/>
+                            </RichTextBox.Padding>
+                            <FlowDocument>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>30</Paragraph.TextIndent>
+                                    Bienvenue sur l'Application E-tafy. Avant d'utiliser notre application, veuillez lire attentivement les présentes conditions d'utilisation.
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>30</Paragraph.TextIndent>
+                                    En accédant ou en utilisant notre application, vous acceptez de vous conformer à nos conditions. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre application.
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+
+                                    <Underline>Utilisation de l'application</Underline>
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>60</Paragraph.TextIndent>
+                                    •	Utilisation autorisée : Vous pouvez utiliser notre application pour vendre des articles de mode éthique conformément aux lois applicables et aux présentes conditions d'utilisation.
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>60</Paragraph.TextIndent>
+                                    •	Compte vendeur : Vous pouvez être amené à créer un compte vendeur pour accéder à certaines fonctionnalités de l'application. Vous êtes responsable de la confidentialité de votre compte et de votre mot de passe, ainsi que de toutes les activités qui se produisent sous votre compte.
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>60</Paragraph.TextIndent>
+                                    •	Contenu Vendeur : Vous êtes responsable de tout contenu que vous publiez sur l'application, y compris les informations sur les articles que vous vendez. Vous acceptez que le contenu que vous publiez ne viole pas les droits d'auteur, les marques de commerce, la confidentialité, le droit à l'image ou tout autre droit de tiers. Vous nous accordez une licence non exclusive pour utiliser, reproduire et distribuer ce contenu dans le cadre de l'application.
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+
+                                    <Underline>Éthique et durabilité</Underline>
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>30</Paragraph.TextIndent>
+                                    Nous nous engageons à promouvoir la mode éthique et durable. En tant qu'utilisateur de notre application, vous vous engagez à respecter ces principes. Vous ne pouvez pas utiliser l'application pour vendre des articles qui vont à l'encontre de ces valeurs, tels que des articles de mode fabriqués de manière non éthique ou nuisibles pour l'environnement.
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+
+                                    <Underline>Politique de confidentialité</Underline>
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>30</Paragraph.TextIndent>
+                                    Notre politique de confidentialité décrit comment nous collectons, utilisons et partageons vos informations personnelles. En utilisant notre application, vous acceptez les pratiques décrites dans notre politique de confidentialité. Vous pouvez consulter notre politique de confidentialité à tout moment.
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Underline>Limitation de responsabilité</Underline>
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>30</Paragraph.TextIndent>
+                                    Nous nous efforçons de maintenir notre application fonctionnelle et sécurisée, mais nous ne pouvons pas garantir son absence d'erreurs ou d'interruptions. Vous utilisez notre application à vos propres risques. Nous ne sommes pas responsables des pertes ou des dommages résultant de l'utilisation de l'application.
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Underline>Modifications des conditions d'utilisation</Underline>
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>30</Paragraph.TextIndent>
+                                    Nous nous réservons le droit de modifier ces conditions d'utilisation à tout moment. Les modifications prendront effet dès leur publication sur l'application. Il est de votre responsabilité de consulter régulièrement ces conditions pour vous tenir informé des modifications.
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Underline>Contact</Underline>
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>30</Paragraph.TextIndent>
+                                    Si vous avez des questions ou des préoccupations concernant ces conditions d'utilisation, veuillez nous contacter à [e-tafy@gmail.com].
+                                </Paragraph>
+                                <Paragraph TextAlignment="Justify">
+                                    <Paragraph.TextIndent>30</Paragraph.TextIndent>
+                                    En utilisant notre Application de Vente de Mode Éthique, vous acceptez les présentes conditions d'utilisation. Nous vous encourageons à les lire attentivement et à les respecter dans le cadre de votre utilisation de notre application.
+                                </Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+        </Border>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="125,4,0,-268" Grid.RowSpan="4" Grid.ColumnSpan="3" Width="450">
+            <Button
+                x:Name="AnnulerButton"
+                Content="Annuler"
+                FontSize="13"
+                Foreground="#753422"
+                Click="Annuler_Bouton"
+                    Background="White">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#28AEED"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="100" Height="30"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button
+                x:Name="JaccepteButton"
+                Content="J'accepte"
+                FontSize="13"
+                Foreground="#753422"
+                Margin="250,0,0,0"
+                Click="Jaccepte_Clicked"
+                    Background="White">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#28AEED"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="100" Height="30"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+
+
+    </Grid>
+
+</Window>
+

@@ -1,0 +1,141 @@
+﻿<Window x:Class="ModeEthiqueEtafy.View.VendeurInscriptionWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:ModeEthiqueEtafy.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="900">
+    <Grid Margin="5">
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="30"
+                              ShadowDepth="1"
+                              Opacity="0.4"/>
+        </Grid.Effect>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="162*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Section se connecter-->
+        <Border Background="#753422" CornerRadius="15,0,0,15" ClipToBounds="True" Grid.ColumnSpan="2" Margin="0,0,340,0">
+
+            <Border.Clip>
+
+                <RectangleGeometry Rect="0,0,400,645" RadiusX="10"
+                                   RadiusY="10" />
+            </Border.Clip>
+        </Border>
+
+        <StackPanel Margin="0,505,340,0" VerticalAlignment="Top" Grid.ColumnSpan="2">
+
+            <TextBlock FontSize="20" Width="240" 
+                       FontWeight="Light" Foreground="GhostWhite"
+                       Text="Vous avez déjà un compte?" />
+            <TextBlock FontSize="10" Width="240" 
+                       FontWeight="Light" Foreground="GhostWhite"
+                       Text="Connectez-vous pour profiter de notre application" />
+            <Grid>
+                <Button Width="75" Height="80" Background="Transparent" BorderThickness="0">
+                    <materialDesign:PackIcon Kind="Login"
+                                         Width="60"
+                                         Height="60"
+                                         HorizontalAlignment="Center"
+                                         VerticalAlignment="Center"
+                                         Opacity="0.7"
+                                         Foreground="#FFEBC9"/>
+
+                </Button>
+
+
+            </Grid>
+        </StackPanel>
+
+        <!--Section inscription-->
+        <Border Grid.Column="1" 
+                Background="#FFEBC9" 
+                CornerRadius="0,15,15,0" Grid.ColumnSpan="2">
+            <Grid>
+                <Button Background="Transparent" Margin="0,0,-29,0" 
+                        HorizontalAlignment="Right" VerticalAlignment="Top"
+                        BorderThickness="0" Height="56" Width="109"
+                        >
+                    <materialDesign:PackIcon Kind="Close"
+                                         HorizontalAlignment="Right"
+                                         Opacity="0.5" 
+                                         Foreground="IndianRed" Height="32" Width="38"
+                                         />
+                </Button>
+                <!--Femer application-->
+
+                <!--Formulaires-->
+                <StackPanel VerticalAlignment="Center"
+                            Margin="70 0">
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Text=""
+                             materialDesign:HintAssist.Hint="Nom Magasin"
+                             materialDesign:HintAssist.FloatingOffset="0, -20"
+                             BorderBrush="WhiteSmoke"
+                             BorderThickness="0 0 0 1.5"/>
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Text=""
+                             materialDesign:HintAssist.Hint="Login"
+                             materialDesign:HintAssist.FloatingOffset="0, -20"
+                             BorderBrush="WhiteSmoke"
+                             BorderThickness="0 0 0 1.5"
+                             Margin="0 27"/>
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Text=""
+                             materialDesign:HintAssist.Hint="Contact"
+                             materialDesign:HintAssist.FloatingOffset="0, -20"
+                             BorderBrush="WhiteSmoke"
+                             BorderThickness="0 0 0 1.5"
+                             Margin="0 10"/>
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Text=""
+                             materialDesign:HintAssist.Hint="NIFF/STAT"
+                             materialDesign:HintAssist.FloatingOffset="0, -20"
+                             BorderBrush="WhiteSmoke"
+                             BorderThickness="0 0 0 1.5"/>
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Text=""
+                             materialDesign:HintAssist.Hint="Certification (label ethique)"
+                             materialDesign:HintAssist.FloatingOffset="0, -20"
+                             BorderBrush="WhiteSmoke"
+                             BorderThickness="0 0 0 1.5"/>
+                    <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                             
+                             materialDesign:HintAssist.Hint="Mot de passe"
+                             materialDesign:HintAssist.FloatingOffset="0, -20"
+                             BorderBrush="WhiteSmoke"
+                             BorderThickness="0 0 0 1.5"
+                             Margin="0 20"/>
+                    <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                             
+                             materialDesign:HintAssist.Hint="Confirmer le mot de passe"
+                             materialDesign:HintAssist.FloatingOffset="0, -20"
+                             BorderBrush="WhiteSmoke"
+                             BorderThickness="0 0 0 1.5"
+                             Margin="0 20"/>
+
+                    <CheckBox Margin="0 40 0 20 "
+                              FontSize="16">
+                        <TextBlock>
+                            <Run Foreground="White">En vous inscrivant, vous vous engagez à ....</Run>
+                        </TextBlock>
+                    </CheckBox>
+                    <Button Content="S'inscrire" Background="#753422"
+                            Foreground="white"
+                            Width="100"
+                            materialDesign:ButtonAssist.CornerRadius="20"
+                            Style="{StaticResource MaterialDesignFlatButton}"></Button>
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+    </Grid>
+</Window>

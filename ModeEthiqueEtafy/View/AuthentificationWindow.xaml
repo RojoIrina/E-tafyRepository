@@ -1,0 +1,126 @@
+﻿<Window x:Class="ModeEthiqueEtafy.View.AuthentificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModeEthiqueEtafy.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Name="authentificationWindow" Height="450" Width="700"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        FontSize="15"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+         ResizeMode="NoResize" WindowStyle="SingleBorderWindow">
+    <Grid Background="#FFFBD0D0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Background="White">
+            <Image Source="C:/Users/rojoa/OneDrive/Documents/Images/logo2.png"
+                           Width="220" Height="90"/>
+
+
+        </Grid>
+
+        <StackPanel Grid.Column="1" Background="#FFFBD0D0"
+                            Width="300"
+                            Orientation="Vertical"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" Height="335">
+
+
+
+
+            <TextBlock FontSize="40" Width="198" Height="47"
+                       FontWeight="Light" Foreground="White"
+                       Text="Connexion" />
+
+
+
+
+            <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Text="{Binding LoginConnex, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                             materialDesign:HintAssist.Hint="E-mail"
+                             materialDesign:HintAssist.FloatingOffset="0, -20"
+                             BorderBrush="WhiteSmoke"
+                             BorderThickness="0 0 0 1.5"
+                             Margin="0 10">
+
+
+            </TextBox>
+            <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                             materialDesign:HintAssist.Hint="Mot de passe"
+                             materialDesign:HintAssist.FloatingOffset="0, -20"
+                             BorderBrush="WhiteSmoke"
+                             BorderThickness="0 0 0 1.5"
+                             Margin="0 20"
+                             PasswordChanged="PasswordBox_PasswordChanged"></PasswordBox>
+            <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0,30,0,0"/>
+            <Button x:Name="LoginButton"                          
+                            BorderThickness="0"
+                            Content=" Se connecter"
+                            Foreground="#753422"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            FontWeight="Bold"
+                            Cursor="Hand"
+                    Command="{Binding SeConnecter, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#28AEED"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="100" Height="30"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="Annuler"
+                        BorderThickness="0"
+                            Content="Annuler"
+                            Foreground="#753422"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                                 FontWeight="Bold"
+                            Cursor="Hand" Margin="0,12,0,5" Click="Annuler_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#28AEED"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="100" Height="30"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

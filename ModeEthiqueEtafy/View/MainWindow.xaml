@@ -1,0 +1,132 @@
+﻿<Window x:Class="ModeEthiqueEtafy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+        xmlns:local="clr-namespace:ModeEthiqueEtafy"
+        
+           Name="mainWindow"  Height="450" Width="700"
+        WindowStyle="SingleBorderWindow" ResizeMode="NoResize"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid Background="White" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#FFFBD0D0">
+            <Button x:Name="InscrireBouton" Content="S'inscrire" Width="111" Background="White" Foreground="#9D5353" FontWeight="Bold" Click="Inscrire_Click" Margin="450,0,0,0">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#9D5353"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#28AEED"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="100" Height="30"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="SeConnecterButton" Content="Se connecter" VerticalAlignment="Center" Width="109" Margin="0,10,10,10" Background="White" Foreground="#9D5353"
+                    FontWeight="Bold" Click="SeConnecterButton_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#753422"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#28AEED"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="100" Height="30"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+
+        </StackPanel>
+        <StackPanel Grid.Row="1"  Background="White">
+            <Border  Height="402" Background="#FFFBD0D0" CornerRadius="0,0,12,12">
+
+                <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95" RenderTransformOrigin="0.488,0.477" Width="420" Background="White" Margin="0,0,0,82">
+                    <Grid Margin="0,55,0,38" >
+
+                        <StackPanel
+                            Width="800"
+                            Orientation="Vertical"
+                            Margin="98,0,98,10" 
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                     >
+                            <TextBlock Text="Bienvenue"
+                               HorizontalAlignment="Center"
+                               Foreground="#9D5353"
+                               FontSize="45"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat" Height="46"                             
+                               />
+                            <TextBlock Text="sur"
+                               HorizontalAlignment="Center"
+                               Foreground="#9D5353"
+                               FontSize="40"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat" Height="47"                             
+                               />
+
+                            <Image Source="C:/Users/rojoa/OneDrive/Documents/Images/logo2.png"
+                           Width="220" Height="90"/>
+
+
+
+                            <Label Content=" ''Stylé et engagé ''" FontSize="15" Margin="20,0,0,0" Width="161"/>
+
+                            <ContentControl  Content="{Binding SelectedView}"/>
+                        </StackPanel>
+
+
+                    </Grid>
+
+                </Border>
+
+            </Border>
+
+
+
+
+
+
+
+        </StackPanel>
+
+    </Grid>
+</Window>

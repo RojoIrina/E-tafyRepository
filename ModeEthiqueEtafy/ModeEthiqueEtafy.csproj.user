@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\AcheteurInscriptionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AuthentificationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CommandeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ConditionUtilisationAcheteur.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\conditionUtilisationVendeur.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EspaceVendeurWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\FormulaireInsertionProduitWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\FormulaireVendeur.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\InscriptionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\MagasinView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PaiementView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PaimentUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\VendeurInscriptionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Theme\Style.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AcheteurInscriptionWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AuthentificationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CommandeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ConditionUtilisationAcheteur.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ConditionUtilisationVendeur.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EspaceVendeurWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\FormulaireInsertionProduitWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\FormulaireVendeur.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\InscriptionWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MagasinView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PaiementView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PaimentUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\VendeurInscriptionWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

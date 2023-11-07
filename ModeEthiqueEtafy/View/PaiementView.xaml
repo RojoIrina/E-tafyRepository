@@ -1,0 +1,134 @@
+﻿<UserControl x:Class="ModeEthiqueEtafy.View.PaiementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:ModeEthiqueEtafy.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" Width="701" Name="paiementView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Background="#FFFEFEFE" Margin="0,40,0,0" Grid.RowSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="336*"></ColumnDefinition>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="365*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Margin="0,0,176,229"/>
+            <Grid Grid.Column="2" Margin="0,-10,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="91.144"></RowDefinition>
+                    <RowDefinition Height="47*"></RowDefinition>
+                    <RowDefinition Height="47*"></RowDefinition>
+                    <RowDefinition Height="25*"></RowDefinition>
+                    <RowDefinition Height="21*"/>
+                    <RowDefinition Height="47*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="1" Grid.Row="1" 
+                       Content="Compte" 
+                       x:Name="ComptePaiementLabel"
+                       FontWeight="Bold"
+                       FontSize="15"
+                       HorizontalAlignment="Center"
+                       Foreground="#753422" Margin="0,10,0,48" Width="151" RenderTransformOrigin="0.5,0.5">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-0.838"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label Grid.Column="1" Grid.Row="1" 
+                       Content="032 56 855 96 / 034 45 888 52 &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;117 6854 2485 858"
+                       x:Name="NumeroTelephonePaiementLabel"
+                       FontStyle="Normal"
+                       Foreground="#753422"
+                       FontWeight="Bold" Margin="0,43,0,2">
+                </Label>
+
+
+                <Label Grid.Column="1" Grid.Row="1" 
+                       Content="117 6854 2485 858"
+                       x:Name="NumCompteBancaireLabel"
+                       FontStyle="Normal"
+                       Foreground="#753422"
+                       FontWeight="Bold" Margin="0,69,0,10" Grid.RowSpan="2"/>
+                <TextBox Grid.Column="1" Grid.Row="1"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                            materialDesign:HintAssist.Hint="Votre réference de paiement"
+                            materialDesign:HintAssist.FloatingOffset="0, 10"
+                            BorderBrush="WhiteSmoke"
+                            BorderThickness="0 0 0 2" Margin="8,89,28,10" Grid.RowSpan="2"></TextBox>
+
+                <Label Grid.Column="0" Grid.Row="1"
+                       Content="Téléphone" 
+                       x:Name="TelephonePaimentLabel"
+                       FontStyle="Normal"
+                       Foreground="#753422"
+                       FontWeight="Bold" Margin="0,43,171,10" Grid.ColumnSpan="2"
+                       />
+                <Label Grid.Column="0" Grid.Row="1" 
+                       Content="Numero Compte Bancaire"
+                       x:Name="NumeroComptePaiementLabel"
+                       FontStyle="Normal"
+                       Foreground="#753422"
+                       FontWeight="Bold" Margin="0,69,5,2" Grid.RowSpan="2"
+                       />
+                <Label Grid.Column="0" Grid.Row="2"
+                       Content="Reference"
+                       x:Name="ReferenceLabel"
+                       Foreground="#753422"
+                       FontStyle="Normal"
+                       FontWeight="Bold" Margin="0,12,6,10"/>
+            </Grid>
+        </Grid>
+
+        <Grid Background="#FFFBD0D0" Height="50" VerticalAlignment="Center">
+            <TextBlock Text="Paiement hebergement"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold"
+                       FontStretch="Condensed"
+                       Foreground="#753422"
+                       FontSize="17"
+            ></TextBlock>
+        </Grid>
+        <StackPanel Grid.Row="2" Background="#FFFBD0D0" Orientation="Horizontal" Width="701" RenderTransformOrigin="0.492,-0.084" HorizontalAlignment="Center" Height="80" VerticalAlignment="Center">
+            <Button x:Name="AnnulerPaiementButton"
+                    Width="98" 
+                    Margin="170,0,0,0"
+                     Content="Annuler"
+                    Background="white"
+                    Foreground="#753422"
+                   
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    materialDesign:ButtonAssist.CornerRadius="20" Click="Annuler_Click"/>
+            <Button x:Name="ValiderPaiementButton"
+                    Width="100" 
+                    HorizontalAlignment="Left" 
+                    Margin="270,0,0,0"
+                     Content="Valider"
+                    Background="white"
+                    Foreground="#753422"
+                  
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    materialDesign:ButtonAssist.CornerRadius="20">
+            </Button>
+        </StackPanel>
+        <Image   Grid.Row="1"  Grid.Column="0"  Source="C:/Users/rojoa/OneDrive/Documents/Images/rojo.jpg" Margin="0,0,429,2" />
+    </Grid>
+</UserControl>
